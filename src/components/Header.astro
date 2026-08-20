@@ -1,0 +1,23 @@
+---
+import { siteConfig } from '../config/site.js';
+---
+
+<header class="border-b border-border">
+  <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+    <div class="text-2xl font-serif font-semibold text-accent">{siteConfig.name}</div>
+    
+    <nav class="hidden md:block">
+      <ul class="flex space-x-8">
+        {siteConfig.navItems.map((item) => (
+          <li>
+            <a href={item.href} class="text-text hover:text-accent transition-colors duration-200">{item.name}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+    
+    <button class="px-4 py-2 border border-accent text-accent rounded-md hover:bg-accent hover:text-bg transition-colors duration-200">
+      Subscribe
+    </button>
+  </div>
+</header>

@@ -1,0 +1,94 @@
+---
+import { siteConfig } from '../config/site.js';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+  <div class="min-h-screen flex flex-col">
+    <Header />
+    
+    <main class="flex-grow container mx-auto px-4 py-8">
+      <!-- Hero Section -->
+      <section class="mb-16">
+        <div class="max-w-3xl mx-auto text-center">
+          <span class="px-3 py-1 bg-accent text-bg text-sm font-semibold rounded-full mb-4 inline-block">Featured</span>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-light text-text mb-6">The Future of Independent Media</h1>
+          <p class="text-xl text-textMuted mb-8">Exploring the evolving landscape of journalism and storytelling in the digital age.</p>
+          <div class="flex justify-center items-center space-x-4 text-sm text-textFaint">
+            <span>By Alex Morgan</span>
+            <span>•</span>
+            <span>August 19, 2026</span>
+            <span>•</span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Articles Grid -->
+      <section class="mb-16">
+        <h2 class="text-2xl font-serif font-semibold text-text mb-8">Latest Stories</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Article 1 -->
+          <ArticleCard 
+            tag="Technology" 
+            title="The Rise of AI in Journalism"
+            excerpt="How artificial intelligence is transforming the way we gather, analyze, and present news stories."
+            date="August 18, 2026"
+            readTime="4"
+          />
+          
+          <!-- Article 2 -->
+          <ArticleCard 
+            tag="Society" 
+            title="Digital Divide in Rural Communities"
+            excerpt="Examining the challenges faced by remote areas in accessing quality digital infrastructure."
+            date="August 17, 2026"
+            readTime="6"
+          />
+          
+          <!-- Article 3 -->
+          <ArticleCard 
+            tag="Opinion" 
+            title="The Ethics of Social Media Algorithms"
+            excerpt="A deep dive into how algorithmic curation shapes our information consumption."
+            date="August 16, 2026"
+            readTime="5"
+          />
+          
+          <!-- Article 4 -->
+          <ArticleCard 
+            tag="Culture" 
+            title="Streaming Wars: What's Next?"
+            excerpt="Analyzing the competitive landscape of global streaming platforms and their impact on content creation."
+            date="August 15, 2026"
+            readTime="7"
+          />
+          
+          <!-- Article 5 -->
+          <ArticleCard 
+            tag="Environment" 
+            title="Climate Tech Innovations"
+            excerpt="Emerging technologies that are making a difference in the fight against climate change."
+            date="August 14, 2026"
+            readTime="8"
+          />
+          
+          <!-- Article 6 -->
+          <ArticleCard 
+            tag="Business" 
+            title="The Gig Economy's New Frontier"
+            excerpt="How traditional employment models are being redefined in the modern economy."
+            date="August 13, 2026"
+            readTime="5"
+          />
+        </div>
+      </section>
+    </main>
+    
+    <Footer />
+  </div>
+</BaseLayout>

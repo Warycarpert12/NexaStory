@@ -1,0 +1,10 @@
+---
+import { siteConfig } from '../config/site.js';
+---
+
+<footer class="border-t border-border mt-12 py-8">
+  <div class="container mx-auto px-4 text-center">
+    <div class="text-xl font-serif font-semibold text-accent mb-2">{siteConfig.name}</div>
+    <p class="text-textFaint">&copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
+  </div>
+</footer>
